@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html {
+    font-family: "lato", serif;
+    width: 100vw;
+    height: auto;
+    color: #181A18;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    background-color: #fff;
+    display: block;
+}
+
+
+/* Header styles */
+header {
+    width: 100%;
+}
+
+.box {
+    padding: 1% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-image: url(./Logo.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 58px;
+}
+
+/* navigation menu styles */
+.nav {
+    width: 361px;
+    height: 24px;
+    background-color: transparent;
+}
+
+.nav i {
+    display: none;
+}
+
+.nav nav ul,
+a {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #000;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.nav a:hover {
+    color: #206620;
+    font-weight: bolder;
+    text-decoration: underline;
+    transition-duration: 1s;
+}
+
+
+/* Hero styles */
+.hero {
+    background-image: url(./Hero.png);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .heroBox {
+    width: 25%;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    top: 25%;
+}
+
+.hero .heroBox h1 {
+    line-height: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 2%;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.hero .heroBox p {
+    line-height: 1.2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* Future styles */
+.future {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+}
+
+.futureCont {
+    width: 80%;
+    height: 55%;
+    margin: auto;
+    border: transparent;
+    border-radius: 50px;
+    display: flex;
+    background-color: #F2F0F2;
+}
+
+.futImg {
+    display: flex;
+    flex-direction: row;
+}
+
+.futImg .futImg1,
+.futImg2,
+.futImg3,
+.futImg4 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 20vw;
+    height: 50%;
+}
+
+.futWrit {
+    margin: auto;
+    width: 30vw;
+}
+
+.futWrit h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+.futWrit p {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+
+/* Feature styles */
+.feature {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8%;
+}
+
+.featWrit {
+    display: grid;
+    width: 60%;
+    margin: 0 auto 5% auto;
+    text-align: center;
+}
+
+.featWrit h2 {
+    margin-bottom: 3%;
+    font-weight: bold;
+}
+
+.feat {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+#feat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: transparent 50px;
+    border-radius: 25px;
+    background-color: #E2F1E8;
+    padding: 3%;
+    width: 300px;
+    margin: 0 1%;
+}
+
+.feat i {
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+/* Media Queries starts here */
+@media (max-width: 768px) {
+
+    /* Header section */
+    .nav nav {
+        display: none;
+    }
+
+    .nav i {
+        display: block;
+        position: relative;
+        float: right;
+        font-size: 2rem;
+        margin-right: 10%;
+    }
+
+    .nav i:hover {
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+
+    .hero .heroBox {
+        position: relative;
+        top: 20%;
+    }
+
+    /* Future section */
+    .futureCont {
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+    }
+
+    .futImg {
+        display: flex;
+        flex-direction: row;
+        height: 60%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .futImg .futImg1,
+    .futImg2,
+    .futImg3,
+    .futImg4 {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        width: 45vw;
+        height: 50%;
+    }
+
+    .futImg3 {
+        border-radius: 0 50px 0 0;
+    }
+
+    .futImg4 {
+        border-radius: 0 0 50px 0;
+    }
+
+    .futWrit {
+        width: 70vw;
+        text-align: center;
+    }
+
+    .futWrit h2 {
+        font-size: 2.3rem;
+    }
+
+    .futWrit p {
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-size: 1.2rem;
+    }
+
+    /* Feature Section */
+    .feature {
+        gap: 1.5%;
+    }
+    .featWrit {
+        width: 80%;
+    }
+    .featWrit h2 {
+        font-size: 2.5rem;
+    }
+    .featWrit p {
+        font-size: 1.2rem;
+    }
+
+    .feat {
+        padding: 0 5%;
+        flex-wrap: wrap;
+    }
+    #feat {
+        width: 35vw;
+        margin: 2% 1%;
+    }
+    .feat i {
+        font-size: 3rem;
+        margin-bottom: 2%;
+    }
+    .feat h4 {
+        font-size: 1.5rem;
+    }
+    #feat p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        background-size: cover;
+        background-position: center;
+    }
+    .hero .heroBox {
+        width: 65%;
+        top: 3%;
+        padding: 5% 10%;
+    }
+    
+    .hero .heroBox h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .heroBox p {
+        font-size: 1.2rem;
+    }
+
+    .futureCont {
+        width: 90%;
+        height: 85%;
+        flex-direction: column;
+    }
+
+    .futImg {
+        height: 50%;
+    }
+
+    .futImg .futImg1,
+    .futImg2,
+    .futImg3,
+    .futImg4 {
+        background-position: center;
+        background-size: 100% 100%;
+        width: 45vw;
+        height: 50%;
+    }
+
+    .futWrit h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .futWrit p {
+        font-size: 1.3rem;
+    }
+
+    /* Feature Section */
+    .feature {
+        gap: 2%;
+        height: auto;
+    }
+    .featWrit {
+        width: 90%;
+        margin: 0;
+        padding: 2%;
+    }
+    .featWrit h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .featWrit p {
+        font-size: 1.2rem;
+    }
+    .feat {
+        padding: 0%;
+    }
+    .feat i {
+        font-size: 1.5rem;
+        margin-bottom: 1%;
+    }
+    .feat h4 {
+        font-size: 1.5rem;
+    }
+    #feat {
+        gap: 2%;
+        width: 100%;
+        margin: 0 4%;
+        margin-bottom: 5%;
+        padding: 3%;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 480px) and (orientation: landscape) {
+    .hero .heroBox {
+        width: 65%;
+        top: 1%;
+        padding: 2% 5%;
+    }
+    .futWrit h2 {
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        font-size: 2.2rem;
+    }
+}
